@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 10px;
+    box-shadow: 5px 5px 10px gray;
+    margin-bottom: 2vh;
+}
+.profile_name {
+
+    padding: 10px;   
+    color: rgb(255, 255, 255);  
+    font-size: 30px;    
+}
+
+ul  a{
+    text-decoration: none;
+    color: rgb(237, 243, 245);
+    margin-left: 15px;
+}
+.profile_name{
+
+}
+.links  ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+#info{
+    font-size: 20px;
+}
+ul a:hover {
+    text-decoration: underline;
+    color: white;
+}
+.About-Me{
+    display: flex;
+    align-items: center;
+    margin-left: 4vh;
+}
+.About-Me img{
+    width: 30vw;
+    height: 50vh;
+}
+.About-Me p{
+    margin-left: 10vh;
+    
+}
+#greating{
+    color: blueviolet;
+    font-size: xx-large;
+}
+.About-Me p{
+    font-size: 2vh;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3vh;
+    margin-left: 4vh;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+.card{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    box-shadow: -3px 3px 6px 6px rgba(128, 128, 128, 0.493);
+    padding: 2vh;
+    border-radius: 5px;
+    width: 25vh;
+}
+
+.card img{
+    width: 80px;
+    height: 80px;
+}
+.titls{
+    margin: 4vh;
+    color: blueviolet;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.experience{
+    margin: 4vh;
+}
+.experience ul{
+   margin-left: 5vh;
+   margin-top: 2vh;
+   font-size: large;
+   margin-bottom: 3vh;
+}
+hr{
+    width: 50%;
+    margin-left: 5vh;
+    border: solid rgba(128, 128, 128, 0.582) 1px ;
+}
+.affichage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2vh;
+    gap: 3vh;
+    margin: 4vh;
+}
+.affichage div{
+    padding: 2vh;
+    box-shadow: 3px 3px 5px 5px gray;
+    border-radius: 5px;
+    width: 50vh;
+}
+.Recommendations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+}
+.leave-Recemmendation{
+    margin-bottom: 5vh;
+}
+.leaveR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.leaveR input{
+    margin-top: 3vh;
+}
+
+/* The popup background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px; /* Limit the width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2); /* Add a subtle shadow */
+    text-align: center;
+}
+
+/* The close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+ /* Position the "home" link to the right side */
+ .up {
+    position: fixed; /* Fix it to the viewport */
+    right: 20px; /* 20px from the right edge */
+    bottom: 20px; /* 20px from the bottom */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Style for the anchor link */
+.up a {
+    text-decoration: none; /* Remove underline */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+.up a:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}

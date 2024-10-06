@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="profile_name">
+                <span>Mohamed Elkhouli</span> <br> <span id="info">mohamedelkhouli746@gmail.com <br> +212635531475 </span> 
+            </div>
+            <div class="links">
+                <ul class="topmenu">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </div>      
+        </nav>
+    </header>
+    <article>
+        <section class="About-Me" id="home">
+            <img src="asstets/img.jpg" alt="img">
+            <p>
+                <span id="greating">Hi, I'M Mohamed Elkhouli ! 👋</span> <br>
+                I am a full stack developer. I'm studying at the moment; I learned HTML, CSS, SQL, React, JS, Node.js, Express.
+            </p>
+        </section>
+        <h3 class="titls">Skills</h3>
+        <section class="skills">
+            <div class="card" id="html">
+                <img src="/asstets/html.png" alt="html">
+                <h6>HTML</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="Css">
+                <img src="/asstets/css.png" alt="Css">
+                <h6>CSS</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="js">
+                <img src="/asstets/js.png" alt="js">
+                <h6>JS</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="nodejs">
+                <img src="/asstets/nodejs.png" alt="nodejs">
+                <h6>Node Js</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="sql">
+                <img src="/asstets/sql.png" alt="sql">
+                <h6>SQL</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="java">
+                <img src="/asstets/java.png" alt="java">
+                <h6>JAVA</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="React">
+                <img src="/asstets/reactjs.png" alt="React">
+                <h6>React</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="laravel">
+                <img src="/asstets/laravel.png" alt="laravel">
+                <h6>Laravel</h6>
+                <span>1 year Experience</span>
+            </div>
+            <div class="card" id="php">
+                <img src="/asstets/php.png" alt="php">
+                <h6>PHP</h6>
+                <span>1 year Experience</span>
+            </div>
+        </section>
+        <h3 class="titls">Projects</h3>
+        <section class="projects">
+            <div class="experience">
+                <h3>E-Commerce Website</h3>
+                <ul>
+                    <li>Developed a website with HTML, JavaScript, CSS, Bootstrap, PHP</li>
+                </ul>
+                <hr>
+            </div>
+            <div class="experience">
+                <h3>E-Commerce Website</h3>
+                <ul>
+                    <li>Developed a website with HTML, JavaScript, CSS, Bootstrap, PHP</li>
+                </ul>
+                <hr>
+            </div>
+            <div class="experience">
+                <h3>E-Commerce Website</h3>
+                <ul>
+                    <li>Developed a website with HTML, JavaScript, CSS, Bootstrap, PHP</li>
+                </ul>
+                <hr>
+            </div>
+        </section>
+        <h3 class="titls">Recommendations</h3>
+        <section class="Recommendations">
+            <div class="affichage">
+                <div>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptate."</p>
+                </div>
+                <div>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptate."</p>
+                </div>
+                <div>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptate."</p>
+                </div>
+                <div>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptate."</p>
+                </div>
+            </div>
+            <div class="leave-Recemmendation">
+                <h2>Leave a Recommendation</h2>
+                <div class="leaveR">
+                    <input type="text" name="name" id="name" placeholder="Enter name (optional)">
+                    <textarea name="recommendationInput" id="recommendationInput"></textarea>
+                    <button type="submit" class="btn btn-outline-primary" onclick="addRecommendation()">Leave Recommendation</button>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <p>Thank you! Your recommendation has been submitted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script>
+        function addRecommendation() {
+            let recommendationText = document.getElementById("recommendationInput").value;
+            let userName = document.getElementById("name").value;
+            let affichageListe = document.querySelector('.affichage');
+
+            let newRecommendationDiv = document.createElement('div');
+            let newRecommendationText = document.createElement('p');
+            if (userName) {
+                newRecommendationText.textContent = `"${recommendationText}" - ${userName}`;
+            } else {
+                newRecommendationText.textContent = `"${recommendationText}"`;
+            }
+
+            newRecommendationDiv.appendChild(newRecommendationText);
+            affichageListe.appendChild(newRecommendationDiv);
+
+            document.getElementById("recommendationInput").value = "";
+            document.getElementById("name").value = "";
+
+            showPopup(true);
+        }
+
+        function showPopup(success) {
+            if (success) {
+                document.getElementById("popup").style.display = "block";
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+    <div class="up">
+        <a href="#home">Home</a>
+    </div>
+</body>
+</html>
